@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service OcrService {
+  rpc OcrPredict (OcrRequest) returns (OcrResponse);
+}
+
+message OcrRequest {
+  bytes image = 1;
+}
+
+message OcrResponse {
+  string latex = 1;
+}
