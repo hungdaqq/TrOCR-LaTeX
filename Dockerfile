@@ -15,7 +15,6 @@ RUN apt-get update && apt-get install -y \
 # Install Python dependencies from requirements.txt
 RUN pip3 install --no-cache-dir -r requirements.txt
 
-RUN nvidia-smi
 # Generate Python bindings for gRPC service
 # RUN python3 -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. ocr_service.proto
 
